@@ -1,85 +1,126 @@
 import { Link } from 'wouter';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Youtube, MessageCircle, Instagram } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-foreground/5 border-t border-border">
-      <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Company Info */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-            <img
-              src="/manus-storage/68682_7bb83086.jpg"
-              alt="Zitruckgo"
-              className="h-8 w-8 rounded-full"
-            />
-              <h3 className="font-bold text-lg">Zitruckgo</h3>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Connecting truck drivers and logistics companies through a professional, technology-enabled marketplace.
+    <footer className="bg-gray-900 text-gray-100">
+      <div className="container py-16 md:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+          {/* Brand Section */}
+          <div className="lg:col-span-1">
+            <Link href="/">
+              <a className="flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity">
+                <img
+                  src="/manus-storage/zitruckgo-logo-transparent_481297ec.png"
+                  alt="Zitruckgo"
+                  className="h-10 w-10 object-contain"
+                />
+                <span className="text-xl font-bold text-green-400">Zitruckgo</span>
+              </a>
+            </Link>
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              Connecting professional truck drivers with logistics companies through a secure, technology-enabled marketplace.
             </p>
+            <div className="flex gap-3">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-green-600 text-gray-300 hover:text-white w-10 h-10 rounded-lg flex items-center justify-center transition-colors" aria-label="Facebook">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-green-600 text-gray-300 hover:text-white w-10 h-10 rounded-lg flex items-center justify-center transition-colors" aria-label="YouTube">
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a href="https://wa.me/19784170522" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-green-600 text-gray-300 hover:text-white w-10 h-10 rounded-lg flex items-center justify-center transition-colors" aria-label="WhatsApp">
+                <MessageCircle className="w-5 h-5" />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-green-600 text-gray-300 hover:text-white w-10 h-10 rounded-lg flex items-center justify-center transition-colors" aria-label="Instagram">
+                <Instagram className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Company */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
+            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wide">Company</h3>
+            <ul className="space-y-3">
               <li>
                 <Link href="/about">
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
+                  <a className="text-gray-400 hover:text-green-400 transition-colors text-sm">
                     About Us
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/training">
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Training
-                  </a>
-                </Link>
+                <a href="#" className="text-gray-400 hover:text-green-400 transition-colors text-sm">
+                  Careers
+                </a>
               </li>
               <li>
-                <Link href="/marketplace">
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Marketplace
-                  </a>
-                </Link>
+                <a href="#" className="text-gray-400 hover:text-green-400 transition-colors text-sm">
+                  Blog
+                </a>
               </li>
               <li>
-                <Link href="/services">
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Services
-                  </a>
-                </Link>
+                <a href="#" className="text-gray-400 hover:text-green-400 transition-colors text-sm">
+                  Press
+                </a>
               </li>
             </ul>
           </div>
 
           {/* Resources */}
           <div>
-            <h4 className="font-semibold mb-4">Resources</h4>
-            <ul className="space-y-2 text-sm">
+            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wide">Resources</h3>
+            <ul className="space-y-3">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Blog
-                </a>
+                <Link href="/training">
+                  <a className="text-gray-400 hover:text-green-400 transition-colors text-sm">
+                    Training
+                  </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="#" className="text-gray-400 hover:text-green-400 transition-colors text-sm">
                   FAQ
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="#" className="text-gray-400 hover:text-green-400 transition-colors text-sm">
+                  Documentation
+                </a>
+              </li>
+              <li>
+                <Link href="/contact">
+                  <a className="text-gray-400 hover:text-green-400 transition-colors text-sm">
+                    Support
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wide">Legal</h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="#" className="text-gray-400 hover:text-green-400 transition-colors text-sm">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="#" className="text-gray-400 hover:text-green-400 transition-colors text-sm">
                   Terms of Service
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-green-400 transition-colors text-sm">
+                  Cookie Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-green-400 transition-colors text-sm">
+                  Disclaimer
                 </a>
               </li>
             </ul>
@@ -87,43 +128,41 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-2">
-                <Phone className="w-4 h-4 mt-0.5 text-secondary flex-shrink-0" />
-                <span className="text-muted-foreground">+19784170522</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Mail className="w-4 h-4 mt-0.5 text-secondary flex-shrink-0" />
-                <a href="mailto:info@zitruckgo.com" className="text-muted-foreground hover:text-primary transition-colors">
-                  info@zitruckgo.com
-                </a>
-              </li>
-              <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-0.5 text-secondary flex-shrink-0" />
-                <span className="text-muted-foreground">Logistics Headquarters</span>
-              </li>
-            </ul>
+            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wide">Contact</h3>
+            <div className="space-y-3">
+              <a href="tel:+19784170522" className="flex items-center gap-2 text-gray-400 hover:text-green-400 transition-colors text-sm">
+                <Phone className="w-4 h-4 flex-shrink-0" />
+                +1 (978) 417-0522
+              </a>
+              <a href="mailto:info@zitruckgo.com" className="flex items-center gap-2 text-gray-400 hover:text-green-400 transition-colors text-sm">
+                <Mail className="w-4 h-4 flex-shrink-0" />
+                info@zitruckgo.com
+              </a>
+              <div className="flex items-start gap-2 text-gray-400 text-sm">
+                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                <span>Logistics Headquarters</span>
+              </div>
+            </div>
           </div>
         </div>
 
+        {/* Divider */}
+        <div className="border-t border-gray-800 my-8"></div>
+
         {/* Bottom Section */}
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-gray-400 text-sm">
             © {currentYear} Zitruckgo. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <a href="https://facebook.com" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-              Facebook
+          <div className="flex gap-6 text-sm text-gray-400">
+            <a href="#" className="hover:text-green-400 transition-colors">
+              Privacy Policy
             </a>
-            <a href="https://youtube.com" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-              YouTube
+            <a href="#" className="hover:text-green-400 transition-colors">
+              Terms of Service
             </a>
-            <a href="https://wa.me/19784170522" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-              WhatsApp
-            </a>
-            <a href="https://instagram.com" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-              Instagram
+            <a href="#" className="hover:text-green-400 transition-colors">
+              Cookie Settings
             </a>
           </div>
         </div>

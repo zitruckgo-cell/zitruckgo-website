@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
-import { Truck, BookOpen, Zap, BarChart3, Shield, Users } from 'lucide-react';
+import { Truck, BookOpen, Zap, BarChart3, Shield, Users, ArrowRight, CheckCircle } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
@@ -19,25 +19,26 @@ export default function Home() {
             backgroundPosition: 'center',
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
         </div>
         
         <div className="container relative z-10 flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1">
-            <h1 className="text-white text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Drive and deliver loads with confidence and earn more
+            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Drive and deliver loads with confidence
             </h1>
-            <p className="text-white/90 text-lg mb-8 max-w-lg">
+            <p className="text-white/90 text-lg md:text-xl mb-8 max-w-lg leading-relaxed">
               Zitruckgo connects professional truck drivers with logistics companies through a secure, technology-enabled marketplace. Access loads, training, and opportunities to grow your career.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/marketplace">
-                <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base">
+                <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-base font-semibold flex items-center gap-2">
                   Explore Marketplace
+                  <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-base">
+                <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-3 text-base font-semibold">
                   Get in Touch
                 </Button>
               </Link>
@@ -46,12 +47,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Overview */}
-      <section className="py-20 md:py-32 bg-muted/30">
+      {/* Features Section */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Zitruckgo?</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Zitruckgo?</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We're building the future of trucking logistics with technology, safety, and professional growth at the core.
             </p>
           </div>
@@ -74,12 +75,86 @@ export default function Home() {
                 description: 'Transparent pricing and direct access to high-paying loads to maximize your earnings.',
               }
             ].map((feature, i) => (
-              <div key={i} className="bg-background p-8 rounded-xl shadow-sm border border-border">
-                <feature.icon className="w-12 h-12 text-primary mb-6" />
-                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+              <div key={i} className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                <div className="bg-green-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+                  <feature.icon className="w-7 h-7 text-green-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Everything You Need to Succeed</h2>
+              <div className="space-y-4">
+                {[
+                  'Access to thousands of verified loads',
+                  'Professional driver training and certification',
+                  'Real-time load tracking and updates',
+                  'Transparent pricing and instant payments',
+                  'Dedicated support team',
+                  'Community of professional drivers'
+                ].map((benefit, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
+                    <span className="text-gray-700 font-medium">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 md:p-12">
+              <div className="bg-white rounded-lg p-6 shadow-md">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Join Thousands of Drivers</h3>
+                <div className="space-y-3 mb-6">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Active Drivers</span>
+                    <span className="text-2xl font-bold text-green-600">5,000+</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Loads Completed</span>
+                    <span className="text-2xl font-bold text-green-600">50,000+</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Avg. Earnings</span>
+                    <span className="text-2xl font-bold text-green-600">$5,000/mo</span>
+                  </div>
+                </div>
+                <Link href="/marketplace">
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3">
+                    Start Earning Today
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 md:py-24 bg-green-600">
+        <div className="container text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-green-50 mb-8 max-w-2xl mx-auto">
+            Join our community of professional drivers and start earning more today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/marketplace">
+              <Button className="bg-white text-green-600 hover:bg-gray-100 px-8 py-3 text-base font-semibold">
+                Explore Loads
+              </Button>
+            </Link>
+            <Link href="/training">
+              <Button variant="outline" className="border-2 border-white text-white hover:bg-green-700 px-8 py-3 text-base font-semibold">
+                Learn More
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
