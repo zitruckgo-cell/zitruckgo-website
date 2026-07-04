@@ -27,8 +27,8 @@ export default function Navigation() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white shadow-lg'
-          : 'bg-white/95 backdrop-blur-sm'
+          ? 'bg-green-50 shadow-lg'
+          : 'bg-green-50/95 backdrop-blur-sm'
       }`}
     >
       <nav className="container flex items-center justify-between py-3 md:py-4">
@@ -47,10 +47,10 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-6 lg:gap-8">
+        <div className="hidden md:flex flex-col items-start gap-2 absolute top-full left-0 right-0 bg-green-50 border-b border-green-200 p-4 shadow-lg">
           {navItems.map((item) => (
             <Link key={item.href} href={item.href}>
-              <a className="text-sm lg:text-base font-medium text-gray-700 hover:text-green-600 transition-colors">
+              <a className="text-sm lg:text-base font-medium text-gray-700 hover:text-green-600 transition-colors py-2 px-4 w-full hover:bg-green-100 rounded">
                 {item.label}
               </a>
             </Link>
@@ -66,7 +66,7 @@ export default function Navigation() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
+          className="md:hidden p-2 hover:bg-green-100 rounded-lg transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -80,7 +80,7 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
+        <div className="md:hidden bg-green-50 border-t border-green-200 shadow-lg">
           <div className="container py-4 flex flex-col gap-3">
             {navItems.map((item) => (
               <Link key={item.href} href={item.href}>

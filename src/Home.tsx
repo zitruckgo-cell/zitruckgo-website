@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         
         <div className="container relative z-10 flex flex-col md:flex-row items-center gap-12">
-          <div className="flex-1">
+          <div className="flex-1 md:flex-1">
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Drive and deliver loads with confidence
             </h1>
@@ -44,11 +44,18 @@ export default function Home() {
               </Link>
             </div>
           </div>
+          <div className="flex-1 hidden md:flex items-center justify-center">
+            <img
+              src="https://images.unsplash.com/photo-1601584942745-8b9d9b9d9d9d?w=500&h=400&fit=crop"
+              alt="Professional truck driver"
+              className="w-full max-w-md rounded-xl shadow-2xl"
+            />
+          </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-green-50">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Zitruckgo?</h2>
@@ -75,7 +82,7 @@ export default function Home() {
                 description: 'Transparent pricing and direct access to high-paying loads to maximize your earnings.',
               }
             ].map((feature, i) => (
-              <div key={i} className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+              <div key={i} className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-green-200">
                 <div className="bg-green-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
                   <feature.icon className="w-7 h-7 text-green-600" />
                 </div>
@@ -88,7 +95,7 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-green-100">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
