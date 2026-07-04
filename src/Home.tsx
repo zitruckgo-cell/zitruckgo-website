@@ -44,11 +44,11 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="flex-1 hidden md:flex items-center justify-center">
+          <div className="flex-1 flex items-center justify-center mt-10 md:mt-0">
             <img
-              src="https://images.unsplash.com/photo-1601584942745-8b9d9b9d9d9d?w=500&h=400&fit=crop"
-              alt="Professional truck driver"
-              className="w-full max-w-md rounded-xl shadow-2xl"
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663812970586/vkjNWUbDXPmSOQqH.png"
+              alt="Zitruckgo Logistics Truck"
+              className="w-full max-w-lg rounded-xl shadow-2xl bg-white/10 backdrop-blur-sm p-2"
             />
           </div>
         </div>
