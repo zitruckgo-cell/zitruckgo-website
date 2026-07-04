@@ -1,7 +1,4 @@
-import { Toaster } from "../components/ui/sonner";
-import { TooltipProvider } from "../components/ui/tooltip";
 import { Route, Switch } from "wouter";
-import ErrorBoundary from "../components/ErrorBoundary";
 import Home from "../Home";
 import About from "../About";
 import Training from "../Training";
@@ -25,12 +22,7 @@ function Router() {
 
 function App() {
   return (
-    <ErrorBoundary>
-      <TooltipProvider>
-        <Toaster />
-        <Router />
-      </TooltipProvider>
-    </ErrorBoundary>
+    <Router />
   );
 }
 

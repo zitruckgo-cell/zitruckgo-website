@@ -1,8 +1,8 @@
-import { Button } from '@/components/ui/button';
+import { Button } from './components/ui/button';
 import { Link } from 'wouter';
 import { MapPin, DollarSign, Clock, TrendingUp, Zap, Shield } from 'lucide-react';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+import Navigation from './Navigation';
+import Footer from './Footer';
 
 export default function Marketplace() {
   return (

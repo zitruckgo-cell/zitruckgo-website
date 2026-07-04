@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button } from './components/ui/button';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
