@@ -46,11 +46,11 @@ export default function Navigation() {
           </a>
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex flex-col items-start gap-2 absolute top-full left-0 right-0 bg-green-50 border-b border-green-200 p-4 shadow-lg">
+        {/* Desktop Menu - Horizontal and Stable */}
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {navItems.map((item) => (
             <Link key={item.href} href={item.href}>
-              <a className="text-sm lg:text-base font-medium text-gray-700 hover:text-green-600 transition-colors py-2 px-4 w-full hover:bg-green-100 rounded">
+              <a className="text-sm lg:text-base font-medium text-gray-700 hover:text-green-600 transition-colors">
                 {item.label}
               </a>
             </Link>
