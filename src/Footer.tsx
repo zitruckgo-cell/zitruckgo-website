@@ -134,9 +134,9 @@ export default function Footer() {
                 <Phone className="w-4 h-4 flex-shrink-0" />
                 +1 (978) 417-0522
               </a>
-              <a href="mailto:zitruckgo@gamil.com" className="flex items-center gap-2 text-gray-400 hover:text-green-400 transition-colors text-sm">
+              <a href="mailto:zitruckgo@gmail.com" className="flex items-center gap-2 text-gray-400 hover:text-green-400 transition-colors text-sm">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                zitruckgo@gamil.com
+                zitruckgo@gmail.com
               </a>
             </div>
           </div>

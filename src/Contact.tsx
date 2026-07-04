@@ -76,7 +76,7 @@ export default function Contact() {
                 {
                   icon: Mail,
                   title: 'Email',
-                  content: 'zitruckgo@gamil.com',
+                  content: 'zitruckgo@gmail.com',
                   subtext: 'Response within 24 hours',
                 },
               ].map((item, idx) => (
@@ -150,7 +150,7 @@ export default function Contact() {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="zitruckgo@gamil.com"
+                    placeholder="zitruckgo@gmail.com"
                     className="w-full border-green-100 focus:border-green-500 rounded-xl"
                   />
                 </div>
