@@ -25,7 +25,7 @@ export default function Navigation() {
       isDropdown: true,
       subItems: [
         { label: 'Browse Marketplace', href: '/marketplace' },
-        { label: 'Zhuri Transcare', href: 'https://zhuritrsacare.zitruckgo.com', external: true },
+        { label: 'Zhuri Transcare', href: 'https://zhuritranscare.zitruckgo.com', external: true },
       ]
     },
     { label: 'Services', href: '/services' },
